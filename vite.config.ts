@@ -6,8 +6,8 @@ const manifest: Partial<ManifestOptions> = {
   name: 'Screen Torch',
   short_name: 'Torch',
   description: 'Turns your screen into eye comfort torch.',
-  theme_color: '#ffecb3',
-  background_color: '#ffecb3',
+  theme_color: '#ff0000',
+  background_color: '#ff0000',
   display: 'fullscreen',
   icons: [
     {
@@ -41,7 +41,7 @@ const pwaOptions: Partial<VitePWAOptions> = {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: (process.env.VITE_BASE_URL || '') + '/?fullscreen=true',
+  base: process.env.VITE_BASE_URL,
   // build: { sourcemap: false },
   plugins: [mkcert(), VitePWA(pwaOptions)],
   resolve: {
